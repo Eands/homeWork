@@ -32,7 +32,7 @@ public class Input {
         } catch (IOException e) {
             e.printStackTrace();
         } catch (NumberFormatException e) {
-            System.err.println("Bad");
+            System.err.println("Wrong array dimension");
             System.exit(1);
         }
         return array;

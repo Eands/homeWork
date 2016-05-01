@@ -1,6 +1,5 @@
 package it.sevenbits.courses.invert.implementation;
 
-import it.sevenbits.courses.output.Output;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,15 +20,19 @@ public class InvertTest {
     @Test
     public void invertArrayString() throws Exception {
         String[] original = {"1", "2", "3"};
-        Invert<String> stringInvert = new Invert<String>();
+        Invert<String> stringInvert = new Invert<>();
         stringInvert.invertArray(original);
-        assertArrayEquals("wrong reverse", new String[] {"1","2","3"}, inverted);
+        //Output<String> stringOutput = new Output<String>();
+        //String[] inv = stringOutput.outputArray(original);
+        assertArrayEquals("wrong reverse", new String[] {"3","2","1"},original);
+
     }
 
-    /*@Test
+    @Test
     public void invertArrayObject() throws Exception {
         Object[] original = {1, 2, 3};
-        Invert<Object> objectInvert = new Invert<Object>();
-        assertArrayEquals("wrong reverse", new Object[]{1, 2, 3}, objectOutput.outputArray(original));
-    }*/
+        Invert<Object> objectInvert = new Invert<>();
+        objectInvert.invertArray(original);
+        assertArrayEquals("wrong reverse", new Object[]{3, 2, 1}, original);
+    }
 }
